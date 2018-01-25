@@ -16,6 +16,7 @@ Build Hardware
 --------------
 1. Attach Conductive tape or alluminum foil to five resistors.  Attach tape/foil as close to resistor bead as possible.
 2. Connect resistors in the following pattern:
+
 | Pin (Tape End)        | Pin (No Tape End)     |
 |:--------------------: |:---------------------:|
 | Digital 2             | Digital 4             |
