@@ -9,7 +9,7 @@
 /** Infinite wait means never */
 #define NEVER 0xFFFFFFFF
 /*Debounce time is minimum time between two notes in MS */
-#define DEBOUNCE_TIME 250
+#define DEBOUNCE_TIME 120
 
 /**Debounce timer
  * Simple abstraction to simplify
