@@ -6,9 +6,7 @@ Hardware
 ========
 1. Arduino Clone [Amazon Link](https://www.amazon.com/dp/B01EWOE0UU/_encoding=UTF8?coliid=I2GTGOF5FVA7Z9&colid=10SUQNNMJO8W9&psc=0)
 2. Jumper Wires [Amazon Link](https://www.amazon.com/120pcs-Multicolored-Breadboard-Arduino-Raspberry/dp/B072L1XMJR/ref=sr_1_2_sspa?s=industrial&ie=UTF8&qid=1516673026&sr=1-2-spons&keywords=male+to+male+jumper+wires&psc=1`)
-3. Audio amplifier [Amazon Link](https://www.amazon.com/dp/B01N053XQS/_encoding=UTF8?coliid=IEO1PSH2QKAOJ&colid=10SUQNNMJO8W9&psc=0)
-4. Speaker [Amazon Link](https://www.amazon.com/dp/B01LN8ONG4/_encoding=UTF8?coliid=I29WTTXYI849AV&colid=10SUQNNMJO8W9&psc=0)
-5. Paper, paper clips, and Graphite pencils - The keyboard for the synth is made by drawing keys on paper in dark graphite pencil, and attaching a jumper via a paper clip to each key.
+3. Conductive Tape or Aluminum Foil
 
 Instructions
 ============
