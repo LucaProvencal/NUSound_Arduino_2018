@@ -6,20 +6,22 @@ AudioPlayer kick;
 AudioPlayer snare;
 AudioPlayer clap;
 AudioPlayer hat;
+AudioPlayer hatO;
 
 
 Serial Arduino;
 int note;
 
 void setup() {
-    size(300, 300);
+    //size(300, 300);
     minim = new Minim(this);
     kick = minim.loadFile("Kick.mp3");
     snare = minim.loadFile("Snare.mp3");
     clap = minim.loadFile("Clap.mp3");
     hat = minim.loadFile("HihatClosed.mp3");
+    hatO = minim.loadFile("HihatOpen.mp3");
     printArray(Serial.list());
-    Arduino = new Serial(this, Serial.list()[2], 250000);
+    Arduino = new Serial(this, Serial.list()[0], 250000);
 }
 
 void draw() {
@@ -44,6 +46,11 @@ void draw() {
         {
             hat.rewind();
             hat.play();
+        }
+        else if(note == 'a')
+        {
+            hatO.rewind();
+            hatO.play();
         }
         else 
         {

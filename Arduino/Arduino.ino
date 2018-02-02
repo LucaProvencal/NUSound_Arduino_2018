@@ -5,7 +5,7 @@
  * This may vary from person to person depending on 
  * Resistors used and length of conductor
  */
-#define THRESHOLD 1000
+#define THRESHOLD 500
 /** Infinite wait means never */
 #define NEVER 0xFFFFFFFF
 /*Debounce time is minimum time between two notes in MS */
@@ -84,20 +84,16 @@ CapacitiveSensor cs_2 = CapacitiveSensor(4, 2);   // 10M resistor between pins 4
 CapacitiveSensor cs_6 = CapacitiveSensor(4, 6);   // 10M resistor between pins 4 & 6, pin 6 is sensor pin, add a wire and or foil if desired
 CapacitiveSensor cs_8 = CapacitiveSensor(4, 8);   // 10M resistor between pins 4 & 8, pin 8 is sensor pin, add a wire and or foil if desired
 CapacitiveSensor cs_10 = CapacitiveSensor(4, 10); // 10M resistor between pins 4 & 10, pin 10 is sensor pin, add a wire and or foil if desired
+CapacitiveSensor cs_12 = CapacitiveSensor(4, 12); // 10M resistor between pins 4 & 10, pin 10 is sensor pin, add a wire and or foil if desired
 DebounceTimer timer2(DEBOUNCE_TIME);
 DebounceTimer timer6(DEBOUNCE_TIME);
 DebounceTimer timer8(DEBOUNCE_TIME);
 DebounceTimer timer10(DEBOUNCE_TIME);
+DebounceTimer timer12(DEBOUNCE_TIME);
 
 
 void setup()
 {
-    //Turn off auto-calibration of sensors
-    cs_2.set_CS_AutocaL_Millis(NEVER);  // turn off autocalibrate on channel 1 - just as an example
-    cs_6.set_CS_AutocaL_Millis(NEVER);  // turn off autocalibrate on channel 1 - just as an example
-    cs_8.set_CS_AutocaL_Millis(NEVER);  // turn off autocalibrate on channel 1 - just as an example
-    cs_10.set_CS_AutocaL_Millis(NEVER); // turn off autocalibrate on channel 1 - just as an example
-
     //Open serial port
     Serial.begin(250000);
 }
@@ -150,6 +146,17 @@ void loop()
             //Serial.print(value10);
             Serial.print("g");
             timer10.reset();
+        }
+    }
+
+    long value12 = cs_12.capacitiveSensor(30);
+    if ( value12 > THRESHOLD)
+    {
+        if (timer12.finished())
+        {
+            //Serial.print(value10);
+            Serial.print("a");
+            timer12.reset();
         }
     }
 }
